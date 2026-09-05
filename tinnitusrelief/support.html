@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鸣静 · 技术支持 | Tinnitus Relief Support</title>
+<style>
+  :root {
+    --ink: #1e293b;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --accent: #0d9488;
+    --accent-soft: #f0fdfa;
+    --bg: #f8fafc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+  header.app-head { text-align: center; margin-bottom: 32px; }
+  .app-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 15px; font-weight: 700; color: var(--accent);
+    letter-spacing: 1px;
+  }
+  .app-badge span.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 26px; font-weight: 800; margin: 10px 0 4px; text-align: center; }
+  .updated { text-align: center; color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .lang-switch { display: flex; justify-content: center; gap: 8px; margin-bottom: 36px; }
+  .lang-switch button {
+    border: 1px solid var(--line); background: #fff; color: var(--muted);
+    padding: 7px 22px; border-radius: 99px; font-size: 14px; cursor: pointer;
+    font-family: inherit; transition: all .15s;
+  }
+  .lang-switch button.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 16px;
+    padding: 28px 28px 24px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 17px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .card h2::before { content: ""; width: 4px; height: 18px; border-radius: 2px; background: var(--accent); flex: none; }
+  .card h3 { font-size: 14.5px; font-weight: 700; margin: 14px 0 4px; color: var(--ink); }
+  .card p, .card li { font-size: 14.5px; color: #334155; }
+  .card ul { padding-left: 22px; margin: 8px 0; }
+  .card li { margin: 4px 0; }
+  .card strong { color: var(--ink); }
+  .highlight {
+    background: var(--accent-soft); border: 1px solid #99f6e4;
+    border-radius: 12px; padding: 14px 16px; margin: 10px 0 2px;
+  }
+  .highlight p { color: #0f766e; font-weight: 600; }
+  .contact-box { text-align: left; }
+  .mail-btn {
+    display: inline-block; margin-top: 8px;
+    background: var(--accent); color: #fff !important; text-decoration: none;
+    font-weight: 700; font-size: 14.5px;
+    padding: 11px 26px; border-radius: 12px;
+  }
+  footer { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 32px; }
+  body.lang-en .zh { display: none; }
+  body.lang-zh .en { display: none; }
+  @media (max-width: 560px) {
+    .page { padding: 32px 14px 60px; }
+    .card { padding: 22px 18px 18px; }
+    h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body class="lang-zh">
+<div class="page">
+
+  <header class="app-head">
+    <div class="app-badge"><span class="dot"></span>鸣静 · Tinnitus Relief</div>
+    <h1 class="zh">技术支持</h1>
+    <h1 class="en">Support</h1>
+    <p class="updated zh">我们通常在 24–48 小时内回复邮件</p>
+    <p class="updated en">We usually reply to emails within 24–48 hours</p>
+    <div class="lang-switch">
+      <button id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <!-- 快速自查 -->
+  <div class="card zh">
+    <h2>常见问题快速排查</h2>
+
+    <h3>1. 没有声音 / 声音很小？</h3>
+    <ul>
+      <li>先用侧边音量键把<strong>媒体音量</strong>调大（App 内音量滑杆 ≠ 系统音量）</li>
+      <li>检查左侧<strong>静音拨片</strong>是否拨到了静音（看屏幕顶部是否出现静音图标）</li>
+      <li>连接蓝牙音箱/耳机时，确认声音输出到了正确的设备</li>
+    </ul>
+
+    <h3>2. 恢复购买 / 会员没生效？</h3>
+    <ul>
+      <li>打开 App → 我的 → 找到<strong>"恢复购买"</strong>按钮点一次</li>
+      <li>确保登录的 Apple ID 与购买时一致</li>
+      <li>仍无效？发邮件给我们，附上 App Store 收据截图</li>
+    </ul>
+
+    <h3>3. 换新手机，数据怎么迁移？</h3>
+    <ul>
+      <li>旧手机：我的 → 数据备份 → <strong>导出备份</strong>，把 JSON 文件存到"文件"App 或隔空投送</li>
+      <li>新手机：安装 App → 我的 → 数据备份 → <strong>导入备份</strong>选择该文件</li>
+      <li>全程本地完成，不经任何服务器</li>
+    </ul>
+
+    <h3>4. 语音讲解 / TTS 没有声音？</h3>
+    <ul>
+      <li>语音讲解使用系统语音引擎，请确认系统"设置 → 辅助功能 → 朗读内容"中语音可用</li>
+      <li>部分机型首次朗读需要下载中文语音包</li>
+    </ul>
+
+    <h3>5. 特征频率校准（A/B 测试）不准？</h3>
+    <ul>
+      <li>请在<strong>安静环境</strong>、音量适中时测试，佩戴耳机效果更佳</li>
+      <li>可多次测试，每次锁定都会保存历史，以最接近主观耳鸣音高的为准</li>
+    </ul>
+  </div>
+
+  <div class="card en">
+    <h2>Quick Troubleshooting</h2>
+
+    <h3>1. No sound / sound too low?</h3>
+    <ul>
+      <li>Raise the <strong>media volume</strong> with the side buttons (the in-app slider is separate from system volume)</li>
+      <li>Check the <strong>silent switch</strong> on the side of your iPhone</li>
+      <li>If using Bluetooth speakers/headphones, confirm audio is routed to the right device</li>
+    </ul>
+
+    <h3>2. Restore purchases / membership not active?</h3>
+    <ul>
+      <li>Open the app → Profile → tap <strong>"Restore Purchases"</strong></li>
+      <li>Make sure you're signed in with the same Apple ID used for the purchase</li>
+      <li>Still not working? Email us with a screenshot of your App Store receipt</li>
+    </ul>
+
+    <h3>3. Moving to a new iPhone?</h3>
+    <ul>
+      <li>Old device: Profile → Data Backup → <strong>Export Backup</strong>; save the JSON file to Files or AirDrop it</li>
+      <li>New device: install the app → Profile → Data Backup → <strong>Import Backup</strong> and pick the file</li>
+      <li>Fully local — nothing goes through any server</li>
+    </ul>
+
+    <h3>4. Voice narration (TTS) silent?</h3>
+    <ul>
+      <li>Narration uses the system speech engine. Check Settings → Accessibility → Spoken Content</li>
+      <li>Some devices need to download a voice pack on first use</li>
+    </ul>
+
+    <h3>5. Pitch matching (A/B test) inaccurate?</h3>
+    <ul>
+      <li>Test in a <strong>quiet environment</strong> at moderate volume; headphones recommended</li>
+      <li>You can test multiple times — every match is saved to history; trust the closest one to your tinnitus pitch</li>
+    </ul>
+  </div>
+
+  <!-- 联系我们 -->
+  <div class="card contact-box zh">
+    <h2>联系我们</h2>
+    <p>以上没有解决你的问题？直接发邮件给我们，<strong>通常 24–48 小时内回复</strong>。为加快定位，建议附上：</p>
+    <ul>
+      <li>iPhone 机型与 iOS 版本（设置 → 通用 → 关于本机）</li>
+      <li>问题的简单描述 + 截图或录屏</li>
+      <li>问题出现的操作步骤</li>
+    </ul>
+    <a class="mail-btn" href="mailto:mingzhaoluw@gmail.com?subject=%E9%B8%A3%E9%9D%99%20App%20%E6%94%AF%E6%8C%81">发邮件：mingzhaoluw@gmail.com</a>
+  </div>
+
+  <div class="card contact-box en">
+    <h2>Contact Us</h2>
+    <p>Still stuck? Email us directly — <strong>we usually reply within 24–48 hours</strong>. To help us debug faster, please include:</p>
+    <ul>
+      <li>Your iPhone model and iOS version (Settings → General → About)</li>
+      <li>A short description of the issue + screenshot or screen recording</li>
+      <li>The steps that reproduce it</li>
+    </ul>
+    <a class="mail-btn" href="mailto:mingzhaoluw@gmail.com?subject=Tinnitus%20Relief%20Support">Email: mingzhaoluw@gmail.com</a>
+  </div>
+
+  <div class="card zh">
+    <h2>隐私说明</h2>
+    <p>通过邮件联系时，请勿在邮件中包含敏感健康信息，除非你愿意提供。我们仅将邮件内容用于解决你的问题，不会用于其他用途。详见<a href="privacy.html">隐私政策</a>。</p>
+  </div>
+  <div class="card en">
+    <h2>Privacy Note</h2>
+    <p>When contacting us by email, please avoid including sensitive health information unless you're comfortable sharing it. Email content is used solely to resolve your issue. See our <a href="privacy.html">Privacy Policy</a>.</p>
+  </div>
+
+  <footer>© 2026 RingCalm · 鸣静 Tinnitus Relief · 中文 / English</footer>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+</script>
+</body>
+</html>
